@@ -23,7 +23,7 @@ const GallerySection = () => {
     {
       id: 3,
       category: 'windows',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: '/lovable-uploads/d06b9b01-e841-451b-b3ae-f833467c2fc1.png',
       title: 'Residential Window Cleaning',
       description: 'Crystal clear windows for modern homes'
     },
@@ -37,9 +37,9 @@ const GallerySection = () => {
     {
       id: 5,
       category: 'windows',
-      image: 'https://images.unsplash.com/photo-1487252665478-49b61b47f302?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      title: 'Commercial Cleaning',
-      description: 'Professional window cleaning for businesses'
+      image: '/lovable-uploads/605561c1-536a-4f93-8028-d6dc24bc404f.png',
+      title: 'Bay Window Cleaning',
+      description: 'Professional cleaning with stunning mountain views'
     },
     {
       id: 6,
@@ -54,6 +54,13 @@ const GallerySection = () => {
       image: '/lovable-uploads/9344de79-5a6c-4434-b8fa-293e5b84bbae.png',
       title: 'Lawn Care & Maintenance',
       description: 'Pristine lawn care with professional mowing and edging services'
+    },
+    {
+      id: 8,
+      category: 'windows',
+      image: '/lovable-uploads/c70b5fac-755d-4eec-81b2-2b749d46ce48.png',
+      title: 'Picture Window Cleaning',
+      description: 'Spotless windows showcasing beautiful Utah County mountain views'
     }
   ];
 
