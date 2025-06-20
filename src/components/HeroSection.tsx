@@ -60,7 +60,7 @@ const HeroSection = () => {
             <Button 
               onClick={handleEstimateClick}
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
             >
               Get Free Estimate
             </Button>
@@ -68,16 +68,16 @@ const HeroSection = () => {
               onClick={handleCallClick}
               variant="outline" 
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
             >
               Call Now: (801) 472-5408
             </Button>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Fixed with better visibility */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-white bg-white/20 backdrop-blur-sm rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
