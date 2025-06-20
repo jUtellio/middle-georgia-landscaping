@@ -9,16 +9,16 @@ const GallerySection = () => {
     {
       id: 1,
       category: 'landscaping',
-      image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      title: 'Garden Transformation',
-      description: 'Complete garden redesign with native Utah plants'
+      image: '/lovable-uploads/040e89b2-6256-45e8-aa02-98341a7c28d5.png',
+      title: 'Modern Desert Landscaping',
+      description: 'Professional xeriscape design with decorative gravel and native plants'
     },
     {
       id: 2,
       category: 'landscaping',
-      image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      title: 'Landscape Maintenance',
-      description: 'Professional lawn care and tree maintenance'
+      image: '/lovable-uploads/2d2acde4-6593-4883-b34a-5fb17119f93a.png',
+      title: 'Complete Lawn Installation',
+      description: 'Fresh sod installation with landscape edging and strategic plantings'
     },
     {
       id: 3,
@@ -30,9 +30,9 @@ const GallerySection = () => {
     {
       id: 4,
       category: 'landscaping',
-      image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      title: 'Hardscape Installation',
-      description: 'Beautiful stone work and pathways'
+      image: '/lovable-uploads/b01c3efd-753d-4b32-8ec6-3748f070117a.png',
+      title: 'Desert Rock Garden',
+      description: 'Stunning desert landscape with natural stone and mountain views'
     },
     {
       id: 5,
@@ -44,9 +44,16 @@ const GallerySection = () => {
     {
       id: 6,
       category: 'landscaping',
-      image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      title: 'Natural Landscaping',
-      description: 'Sustainable landscape design with native species'
+      image: '/lovable-uploads/bc727bcd-32ec-4917-b6f1-08dae59df0bf.png',
+      title: 'Retaining Wall & Lawn',
+      description: 'Professional retaining wall installation with fresh lawn and edging'
+    },
+    {
+      id: 7,
+      category: 'landscaping',
+      image: '/lovable-uploads/9344de79-5a6c-4434-b8fa-293e5b84bbae.png',
+      title: 'Lawn Care & Maintenance',
+      description: 'Pristine lawn care with professional mowing and edging services'
     }
   ];
 
