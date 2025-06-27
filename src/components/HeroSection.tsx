@@ -2,7 +2,11 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Star, Phone, MapPin } from 'lucide-react';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  logoRef?: React.RefObject<HTMLDivElement>;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ logoRef }) => {
   const handleCallClick = () => {
     window.location.href = 'tel:+14784560749';
   };
@@ -25,7 +29,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="animate-fade-in">
           {/* Company Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8" ref={logoRef}>
             <img 
               src="/lovable-uploads/491886410_1088193086663045_5775876936489367045_n-removebg-preview.png" 
               alt="Mid Georgia Landscape Solutions Logo" 
