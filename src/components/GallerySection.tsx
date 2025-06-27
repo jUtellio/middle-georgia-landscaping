@@ -9,42 +9,42 @@ const GallerySection = () => {
     {
       id: 1,
       category: 'landscaping',
-      image: '/lovable-uploads/040e89b2-6256-45e8-aa02-98341a7c28d5.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/481160206_1045350347613986_5580935784565092018_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7eM6GRlQzkMQ7kNvwE9FWSP&_nc_oc=Adlu41zJ67V936l66gHkQ86GX9uf9wRJBJ1-nlzQWx1AseqaYQlDr70VQUzUeR-fWQh_Fcne1ywbfWpXa2A9wASb&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=-D6JLFHfHmgNa4Pb-1SoIw&oh=00_AfNwrTiViR133_qJqO8AStw2irye0c7xi15UdyaAgJ3YJw&oe=686468D7',
       title: 'Modern Landscape Design',
       description: 'Professional landscape design with decorative elements and native Georgia plants'
     },
     {
       id: 2,
       category: 'landscaping',
-      image: '/lovable-uploads/2d2acde4-6593-4883-b34a-5fb17119f93a.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/476342475_1033013568847664_2111236442121360180_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=oon18iC7GEgQ7kNvwHRI0F1&_nc_oc=AdnjJ3vWdUvgneHMG6Cah41h6W6mqUuOdmjJqab0ohPZMGJQ6lyrdQ3TUVrSarP9G1aFZ9Q_IsuIWQ26KgQWPM9Z&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=nSl40RPkOTE4786zvHhqDA&oh=00_AfOSYPWTixATpwDu3rnZotbvkjNpCa7MieHKy4TpqIQqWg&oe=68647263',
       title: 'Complete Lawn Installation',
       description: 'Fresh sod installation with landscape edging and strategic plantings'
     },
     {
       id: 3,
       category: 'hardscaping',
-      image: '/lovable-uploads/bc727bcd-32ec-4917-b6f1-08dae59df0bf.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/481995456_1053677896781231_2395647065497973988_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=mKuE91lZNjEQ7kNvwF2zjWl&_nc_oc=AdkwpY920WwnWuqUIqiHkhHq7VPrObbXPMBb5OePE2KK0PmQ9KqSfiUEBPC4z_RR1aReXM8-bu4cekgYdu9mTdxF&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=A6V7QIKOoRkLrKxBp_mn5A&oh=00_AfMC9P84D_Q24YKSRUs7Oo00PN5cxa8IdVcOFUIfiCe71A&oe=68647B4E',
       title: 'Retaining Wall & Lawn',
       description: 'Professional retaining wall installation with fresh lawn and edging'
     },
     {
       id: 4,
       category: 'landscaping',
-      image: '/lovable-uploads/b01c3efd-753d-4b32-8ec6-3748f070117a.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/485302303_1064084055740615_2213253767994487903_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xstZT90owSMQ7kNvwHgkIk1&_nc_oc=Adnc2kBNYqjog6mFvimTQpPFaKvxGlGkVGqvcsuFbH7FFd9sedFuPaURoDxL6smzI0XXOmlGyF73D0SgJVwPi5pq&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=fdlo3ITPoB4-I-kgfuYj4g&oh=00_AfPo7vbbc-7IgutwL4eJnsyVLsBM62yrESfwQ84r1xhP8g&oe=68646BCC',
       title: 'Garden Design',
       description: 'Beautiful garden landscape with natural stone and mountain views'
     },
     {
       id: 5,
       category: 'maintenance',
-      image: '/lovable-uploads/9344de79-5a6c-4434-b8fa-293e5b84bbae.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/376406591_694488206033537_4271690165521352885_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=CBRaI2hLiVwQ7kNvwHaf4zk&_nc_oc=AdmoeP0aumRQxXA3UqBVfBjSNNoTnX-eljtOduI_nb8zjUAoAEtyE2_jXRPsb26Gc_lfn1nkSHCUD2XerA8NLIwA&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=tIzt_COseYsDEL_PWrwzTw&oh=00_AfPwDZEiSxyp1_ZGCKvAop6oWPik2Mlff4cr3afWLREeoQ&oe=6864431C',
       title: 'Lawn Care & Maintenance',
       description: 'Pristine lawn care with professional mowing and edging services'
     },
     {
       id: 6,
       category: 'landscaping',
-      image: '/lovable-uploads/040e89b2-6256-45e8-aa02-98341a7c28d5.png',
+      image: 'https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/503877112_1124193719729648_6298897044332267887_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Qzair987rZsQ7kNvwFmDYIe&_nc_oc=AdlYQzHjoiYN2QdoBeG5unCXkO5h3hwQi0wqTIrGpu_O8c7XSPlwTD60Bq4kJ7i_dUDAQ_5dNT-D2aHOpA92wSOX&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=FUt9oO4IVk5Z-EMqWdSXyw&oh=00_AfOn4tGQ_Pjz62l_uqS2jZT-yT2JmNJ2POh9m4MYP_1tmA&oe=686457B1',
       title: 'Property Transformation',
       description: 'Complete property makeover showcasing our unmatched workmanship'
     }
