@@ -1,0 +1,8 @@
+@keyframes horizontal-bounce {
+  0%, 100% { transform: translateX(0) rotate(90deg); }
+  50% { transform: translateX(24px) rotate(90deg); }
+}
+
+.animate-horizontal-bounce {
+  animation: horizontal-bounce 1s infinite;
+} 
