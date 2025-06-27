@@ -44,11 +44,11 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             Transform Your House into Your Forever Home
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-100 max-w-4xl mx-auto">
-            Professional Landscaping Services in Milledgeville & Mid Georgia
+            Professional Landscaping Services Mid Georgia
           </h2>
 
           {/* Contact Info */}
