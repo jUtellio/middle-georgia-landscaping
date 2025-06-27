@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
 import { Leaf, Home, Scissors, TreePine, Sparkles, Users } from 'lucide-react';
+import { FadeInWhenVisible } from './FadeInWhenVisible';
 
 const ServicesSection = () => {
   const services = [
@@ -39,34 +40,38 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            Our Expert Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            From landscape design to property upgrades, we provide comprehensive services to transform 
-            your house into your forever home throughout Mid Georgia.
-          </p>
-          <div className="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full">
-            <Sparkles className="w-5 h-5 text-green-600" />
-            <span className="font-semibold text-green-800">Unmatched Workmanship & Dedicated Support</span>
+        <FadeInWhenVisible>
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-green-800 mb-6">
+              Our Expert Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              From landscape design to property upgrades, we provide comprehensive services to transform 
+              your house into your forever home throughout Mid Georgia.
+            </p>
+            <div className="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full">
+              <Sparkles className="w-5 h-5 text-green-600" />
+              <span className="font-semibold text-green-800">Unmatched Workmanship & Dedicated Support</span>
+            </div>
           </div>
-        </div>
+        </FadeInWhenVisible>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
-                  {service.icon}
-                </div>
-                <h4 className="font-semibold text-xl mb-3 text-gray-800">{service.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <FadeInWhenVisible delay={0.15}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {services.map((service, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                    {service.icon}
+                  </div>
+                  <h4 className="font-semibold text-xl mb-3 text-gray-800">{service.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </FadeInWhenVisible>
 
         {/* Call to Action */}
         <div className="text-center">

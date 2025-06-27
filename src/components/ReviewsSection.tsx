@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
+import { FadeInWhenVisible } from './FadeInWhenVisible';
 
 const ReviewsSection = () => {
   const reviews = [
@@ -57,60 +58,64 @@ const ReviewsSection = () => {
   return (
     <section id="reviews" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="flex items-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-              ))}
+        <FadeInWhenVisible>
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-2 mb-6">
+              <div className="flex items-center space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-3xl font-bold text-gray-700">5.0</span>
             </div>
-            <span className="text-3xl font-bold text-gray-700">5.0</span>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-green-800 mb-6">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+              Don't just take our word for it. Here's what satisfied customers across Mid Georgia have to say about our work.
+            </p>
+            <div className="inline-flex items-center space-x-2 bg-yellow-100 px-4 py-2 rounded-full">
+              <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+              <span className="font-semibold text-yellow-800">Trusted Since 2020</span>
+            </div>
           </div>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            What Our Customers Say
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Don't just take our word for it. Here's what satisfied customers across Mid Georgia have to say about our work.
-          </p>
-          <div className="inline-flex items-center space-x-2 bg-yellow-100 px-4 py-2 rounded-full">
-            <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-            <span className="font-semibold text-yellow-800">Trusted Since 2020</span>
-          </div>
-        </div>
+        </FadeInWhenVisible>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {reviews.map((review) => (
-            <Card key={review.id} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <Quote className="w-6 h-6 text-green-600 opacity-50" />
-                </div>
-                
-                <p className="text-gray-700 mb-4 leading-relaxed italic">
-                  "{review.text}"
-                </p>
-                
-                <div className="border-t pt-4">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="font-semibold text-gray-800">{review.name}</p>
-                      <p className="text-sm text-gray-500">{review.location}</p>
+        <FadeInWhenVisible delay={0.15}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {reviews.map((review) => (
+              <Card key={review.id} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-1">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
                     </div>
-                    <div className="text-right">
-                      <p className="text-sm font-medium text-green-600">{review.service}</p>
+                    <Quote className="w-6 h-6 text-green-600 opacity-50" />
+                  </div>
+                  
+                  <p className="text-gray-700 mb-4 leading-relaxed italic">
+                    "{review.text}"
+                  </p>
+                  
+                  <div className="border-t pt-4">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold text-gray-800">{review.name}</p>
+                        <p className="text-sm text-gray-500">{review.location}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-medium text-green-600">{review.service}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </FadeInWhenVisible>
 
         {/* Call to Action */}
         <div className="text-center">
