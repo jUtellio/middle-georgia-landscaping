@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
@@ -59,8 +58,8 @@ const ContactSection = () => {
             Get Your Free Estimate Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your property? Contact us for a free, no-obligation estimate. 
-            We respond to all inquiries within 24 hours.
+            Ready to transform your house into your forever home? Contact us for a free, 
+            no-obligation estimate. We respond to all inquiries within 24 hours.
           </p>
         </div>
 
@@ -96,7 +95,7 @@ const ContactSection = () => {
                       onChange={(e) => handleInputChange('phone', e.target.value)}
                       required
                       className="w-full"
-                      placeholder="(801) 555-0123"
+                      placeholder="(478) 555-0123"
                     />
                   </div>
                 </div>
@@ -124,12 +123,12 @@ const ContactSection = () => {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landscaping">Landscaping Services</SelectItem>
-                      <SelectItem value="windows">Window Cleaning</SelectItem>
-                      <SelectItem value="both">Both Services</SelectItem>
+                      <SelectItem value="landscaping">Landscape Design & Installation</SelectItem>
                       <SelectItem value="lawn-care">Lawn Care & Maintenance</SelectItem>
-                      <SelectItem value="hardscaping">Hardscaping</SelectItem>
-                      <SelectItem value="pressure-washing">Pressure Washing</SelectItem>
+                      <SelectItem value="hardscaping">Hardscaping & Patios</SelectItem>
+                      <SelectItem value="property-upgrade">Property Upgrade</SelectItem>
+                      <SelectItem value="new-property">New Property Landscaping</SelectItem>
+                      <SelectItem value="consultation">Design Consultation</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -141,7 +140,7 @@ const ContactSection = () => {
                   <Textarea
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    placeholder="Tell us about your project, timeline, and any specific requirements..."
+                    placeholder="Tell us about your vision, timeline, and any specific requirements..."
                     className="w-full h-32"
                   />
                 </div>
@@ -189,10 +188,10 @@ const ContactSection = () => {
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
                       <a 
-                        href="tel:+18014725408" 
+                        href="tel:+14784560749" 
                         className="text-green-600 hover:text-green-700 font-medium text-lg transition-colors"
                       >
-                        (801) 472-5408
+                        (478) 456-0749
                       </a>
                       <p className="text-sm text-gray-600">Click to call on mobile</p>
                     </div>
@@ -204,8 +203,8 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Address</h4>
-                      <p className="text-gray-700">1692 N 240 W</p>
-                      <p className="text-gray-700">Orem, UT 84057</p>
+                      <p className="text-gray-700">2082 N Jefferson St NE</p>
+                      <p className="text-gray-700">Milledgeville, GA 31061</p>
                     </div>
                   </div>
 
@@ -233,19 +232,19 @@ const ContactSection = () => {
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <span className="font-bold">42+ Reviews</span>
+                  <span className="font-bold">Trusted Since 2020</span>
                 </div>
                 <h3 className="font-playfair text-2xl font-bold mb-4">
                   Ready to Get Started?
                 </h3>
                 <p className="mb-6 text-green-100">
-                  Join 42+ satisfied customers who trust AGC with their property care needs.
+                  Let us transform your house into your forever home with unmatched workmanship and dedicated support.
                 </p>
                 <Button 
-                  onClick={() => window.location.href = 'tel:+18014725408'}
+                  onClick={() => window.location.href = 'tel:+14784560749'}
                   className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Call Now: (801) 472-5408
+                  Call Now: (478) 456-0749
                 </Button>
               </CardContent>
             </Card>

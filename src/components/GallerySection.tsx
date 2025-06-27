@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 
@@ -10,8 +9,8 @@ const GallerySection = () => {
       id: 1,
       category: 'landscaping',
       image: '/lovable-uploads/040e89b2-6256-45e8-aa02-98341a7c28d5.png',
-      title: 'Modern Desert Landscaping',
-      description: 'Professional xeriscape design with decorative gravel and native plants'
+      title: 'Modern Landscape Design',
+      description: 'Professional landscape design with decorative elements and native Georgia plants'
     },
     {
       id: 2,
@@ -22,45 +21,31 @@ const GallerySection = () => {
     },
     {
       id: 3,
-      category: 'windows',
-      image: '/lovable-uploads/d06b9b01-e841-451b-b3ae-f833467c2fc1.png',
-      title: 'Residential Window Cleaning',
-      description: 'Crystal clear windows for modern homes'
-    },
-    {
-      id: 4,
-      category: 'landscaping',
-      image: '/lovable-uploads/b01c3efd-753d-4b32-8ec6-3748f070117a.png',
-      title: 'Desert Rock Garden',
-      description: 'Stunning desert landscape with natural stone and mountain views'
-    },
-    {
-      id: 5,
-      category: 'windows',
-      image: '/lovable-uploads/605561c1-536a-4f93-8028-d6dc24bc404f.png',
-      title: 'Bay Window Cleaning',
-      description: 'Professional cleaning with stunning mountain views'
-    },
-    {
-      id: 6,
-      category: 'landscaping',
+      category: 'hardscaping',
       image: '/lovable-uploads/bc727bcd-32ec-4917-b6f1-08dae59df0bf.png',
       title: 'Retaining Wall & Lawn',
       description: 'Professional retaining wall installation with fresh lawn and edging'
     },
     {
-      id: 7,
+      id: 4,
       category: 'landscaping',
+      image: '/lovable-uploads/b01c3efd-753d-4b32-8ec6-3748f070117a.png',
+      title: 'Garden Design',
+      description: 'Beautiful garden landscape with natural stone and mountain views'
+    },
+    {
+      id: 5,
+      category: 'maintenance',
       image: '/lovable-uploads/9344de79-5a6c-4434-b8fa-293e5b84bbae.png',
       title: 'Lawn Care & Maintenance',
       description: 'Pristine lawn care with professional mowing and edging services'
     },
     {
-      id: 8,
-      category: 'windows',
-      image: '/lovable-uploads/c70b5fac-755d-4eec-81b2-2b749d46ce48.png',
-      title: 'Picture Window Cleaning',
-      description: 'Spotless windows showcasing beautiful Utah County mountain views'
+      id: 6,
+      category: 'landscaping',
+      image: '/lovable-uploads/040e89b2-6256-45e8-aa02-98341a7c28d5.png',
+      title: 'Property Transformation',
+      description: 'Complete property makeover showcasing our unmatched workmanship'
     }
   ];
 
@@ -69,14 +54,14 @@ const GallerySection = () => {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-20 bg-white">
+    <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-green-800 mb-6">
             Our Beautiful Work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            See the transformations we've created for homeowners across Utah County. Quality work that speaks for itself.
+            See the transformations we've created for homeowners across Mid Georgia. Quality work that speaks for itself.
           </p>
 
           {/* Filter Buttons */}
@@ -104,15 +89,26 @@ const GallerySection = () => {
               Landscaping
             </Button>
             <Button
-              onClick={() => setActiveFilter('windows')}
-              variant={activeFilter === 'windows' ? 'default' : 'outline'}
+              onClick={() => setActiveFilter('hardscaping')}
+              variant={activeFilter === 'hardscaping' ? 'default' : 'outline'}
               className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                activeFilter === 'windows' 
+                activeFilter === 'hardscaping' 
                   ? 'bg-blue-600 text-white shadow-lg' 
                   : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
               }`}
             >
-              Window Cleaning
+              Hardscaping
+            </Button>
+            <Button
+              onClick={() => setActiveFilter('maintenance')}
+              variant={activeFilter === 'maintenance' ? 'default' : 'outline'}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                activeFilter === 'maintenance' 
+                  ? 'bg-purple-600 text-white shadow-lg' 
+                  : 'border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white'
+              }`}
+            >
+              Maintenance
             </Button>
           </div>
         </div>

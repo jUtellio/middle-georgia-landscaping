@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
@@ -8,55 +7,55 @@ const ReviewsSection = () => {
     {
       id: 1,
       name: "Sarah M.",
-      location: "Orem, UT",
+      location: "Milledgeville, GA",
       rating: 5,
-      text: "AGC transformed our backyard into a beautiful oasis! Their attention to detail and professional service exceeded our expectations. The team was punctual, clean, and the results speak for themselves.",
-      service: "Complete Landscaping"
+      text: "Mid Georgia Landscape Solutions truly transformed our backyard into our dream space! Their attention to detail and professional service exceeded our expectations. They really made our house feel like our forever home.",
+      service: "Complete Landscape Design"
     },
     {
       id: 2,
       name: "Michael R.",
-      location: "Provo, UT",
+      location: "Eatonton, GA",
       rating: 5,
-      text: "Best window cleaning service in Utah County! Our windows have never been cleaner. Professional, reliable, and reasonably priced. I highly recommend AGC for anyone looking for quality service.",
-      service: "Window Cleaning"
+      text: "Outstanding workmanship and dedicated support throughout the entire process. The team was professional, reliable, and delivered exactly what they promised. Highly recommend for anyone in Mid Georgia!",
+      service: "Property Upgrade"
     },
     {
       id: 3,
       name: "Jennifer L.",
-      location: "Spanish Fork, UT",
+      location: "Gray, GA",
       rating: 5,
-      text: "We've used AGC for both landscaping and window cleaning for over two years. They're consistently professional, show up on time, and do excellent work. Couldn't be happier with their service!",
-      service: "Landscaping & Windows"
+      text: "We've used Mid Georgia Landscape Solutions for multiple projects over the past two years. They're consistently professional, show up on time, and do excellent work. Couldn't be happier with their service!",
+      service: "Lawn Care & Landscaping"
     },
     {
       id: 4,
       name: "David K.",
-      location: "Lindon, UT",
+      location: "Sparta, GA",
       rating: 5,
-      text: "AGC installed our new patio and walkway last spring. The craftsmanship is outstanding and has held up beautifully through Utah's weather. Great communication throughout the entire process.",
+      text: "They installed our new patio and walkway last spring. The craftsmanship is outstanding and has held up beautifully through Georgia's weather. Great communication throughout the entire process.",
       service: "Hardscaping"
     },
     {
       id: 5,
       name: "Amanda T.",
-      location: "Orem, UT",
+      location: "Milledgeville, GA",
       rating: 5,
-      text: "Professional lawn care that keeps our yard looking perfect year-round. The team is knowledgeable about local plants and climate. Fair pricing and excellent results every time.",
+      text: "Professional lawn care that keeps our yard looking perfect year-round. The team is knowledgeable about local plants and Georgia's climate. Fair pricing and excellent results every time.",
       service: "Lawn Maintenance"
     },
     {
       id: 6,
       name: "Robert H.",
-      location: "Pleasant Grove, UT",
+      location: "Sandersville, GA",
       rating: 5,
-      text: "Reliable, professional, and detail-oriented. AGC has been maintaining our commercial property for months and the results are consistently excellent. Highly recommend for any property owner.",
-      service: "Commercial Services"
+      text: "Reliable, professional, and detail-oriented. Mid Georgia Landscape Solutions has been maintaining our property for months and the results are consistently excellent. Highly recommend for any property owner in Mid Georgia.",
+      service: "Property Maintenance"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+    <section id="reviews" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-6">
@@ -71,11 +70,11 @@ const ReviewsSection = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Don't just take our word for it. Here's what 42+ satisfied customers across Utah County have to say about our work.
+            Don't just take our word for it. Here's what satisfied customers across Mid Georgia have to say about our work.
           </p>
           <div className="inline-flex items-center space-x-2 bg-yellow-100 px-4 py-2 rounded-full">
             <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-            <span className="font-semibold text-yellow-800">42+ Five-Star Google Reviews</span>
+            <span className="font-semibold text-yellow-800">Trusted Since 2020</span>
           </div>
         </div>
 
@@ -113,14 +112,14 @@ const ReviewsSection = () => {
           ))}
         </div>
 
-        {/* Google Reviews CTA */}
+        {/* Call to Action */}
         <div className="text-center">
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
             <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-4">
               Ready to Join Our Happy Customers?
             </h3>
             <p className="text-gray-600 mb-6">
-              Experience the quality service that has earned us 42+ five-star reviews across Utah County.
+              Experience the quality service that has made us a trusted name in Mid Georgia landscaping since 2020.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
@@ -130,10 +129,10 @@ const ReviewsSection = () => {
                 Get Your Free Estimate
               </button>
               <button 
-                onClick={() => window.location.href = 'tel:+18014725408'}
+                onClick={() => window.location.href = 'tel:+14784560749'}
                 className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
-                Call (801) 472-5408
+                Call (478) 456-0749
               </button>
             </div>
           </div>
