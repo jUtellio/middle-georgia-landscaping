@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { FadeInWhenVisible } from './FadeInWhenVisible';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const GallerySection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -118,26 +119,33 @@ const GallerySection = () => {
 
         <FadeInWhenVisible delay={0.15}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 shadow-2xl"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-200">{item.description}</p>
+            <AnimatePresence initial={false}>
+              {filteredItems.map((item) => (
+                <motion.div
+                  key={item.id}
+                  layout
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 40 }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 shadow-2xl"
+                    />
                   </div>
-                </div>
-              </div>
-            ))}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <p className="text-gray-200">{item.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
         </FadeInWhenVisible>
 
