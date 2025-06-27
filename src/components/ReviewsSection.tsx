@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
 import { FadeInWhenVisible } from './FadeInWhenVisible';
+
+const CARD_WIDTH = 340; // px
+const CARD_GAP = 24; // px
+const SCROLL_SPEED = 1.2; // px per frame
 
 const ReviewsSection = () => {
   const reviews = [
@@ -55,6 +59,36 @@ const ReviewsSection = () => {
     }
   ];
 
+  // Duplicate reviews for seamless looping
+  const carouselReviews = [...reviews, ...reviews];
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-scroll logic
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    let frame: number;
+    let lastTimestamp: number | null = null;
+
+    function step(ts: number) {
+      if (lastTimestamp === null) lastTimestamp = ts;
+      const delta = ts - lastTimestamp;
+      lastTimestamp = ts;
+      if (!isHovered) {
+        carousel.scrollLeft += SCROLL_SPEED * (delta / 16.67); // normalize to 60fps
+        // Loop
+        const totalWidth = (CARD_WIDTH + CARD_GAP) * reviews.length;
+        if (carousel.scrollLeft >= totalWidth) {
+          carousel.scrollLeft -= totalWidth;
+        }
+      }
+      frame = requestAnimationFrame(step);
+    }
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }, [isHovered, reviews.length]);
+
   return (
     <section id="reviews" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -81,11 +115,25 @@ const ReviewsSection = () => {
           </div>
         </FadeInWhenVisible>
 
-        {/* Reviews Grid */}
-        <FadeInWhenVisible delay={0.15}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {reviews.map((review) => (
-              <Card key={review.id} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
+        {/* Carousel */}
+        <div className="relative">
+          {/* Fade overlays */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-12 z-10" style={{background: 'linear-gradient(to right, #f0fdf4 80%, transparent)'}} />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-12 z-10" style={{background: 'linear-gradient(to left, #f0fdf4 80%, transparent)'}} />
+          <div
+            ref={carouselRef}
+            className="flex flex-nowrap gap-6 overflow-x-auto scrollbar-hide py-2"
+            style={{ scrollBehavior: 'auto' }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
+          >
+            {carouselReviews.map((review, idx) => (
+              <Card
+                key={idx}
+                className="min-w-[340px] max-w-[340px] flex-shrink-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-white"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-1">
@@ -95,11 +143,9 @@ const ReviewsSection = () => {
                     </div>
                     <Quote className="w-6 h-6 text-green-600 opacity-50" />
                   </div>
-                  
                   <p className="text-gray-700 mb-4 leading-relaxed italic">
                     "{review.text}"
                   </p>
-                  
                   <div className="border-t pt-4">
                     <div className="flex justify-between items-center">
                       <div>
@@ -115,10 +161,10 @@ const ReviewsSection = () => {
               </Card>
             ))}
           </div>
-        </FadeInWhenVisible>
+        </div>
 
         {/* Call to Action */}
-        <div className="text-center">
+        <div className="text-center mt-12">
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
             <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-4">
               Ready to Join Our Happy Customers?
